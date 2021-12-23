@@ -1,6 +1,6 @@
 {
   "name": "tzklar",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Building blocks for Tezos contracts",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
