@@ -1,5 +1,9 @@
 # tzKlar
 
+[![npm](https://img.shields.io/npm/v/tzklar)](https://npmjs.com/package/tzklar)
+
+[![tzklar](/tzklar-logo.png)](https://tzklar.com)
+
 **Building blocks for Tezos contracts**
 
 [https://tzklar.com](https://tzklar.com)
