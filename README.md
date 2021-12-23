@@ -33,6 +33,9 @@ const myTokenMetadata: TokenMetadata = {
 };
 ```
 
+Also you can check out our documentation page:
+https://klarluft.github.io/tzklar/
+
 ## Development
 
 To setup development environment:
