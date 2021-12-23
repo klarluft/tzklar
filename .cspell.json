@@ -16,7 +16,9 @@
     "exponentiate",
     "globby",
     "Klar",
+    "Klarluft",
     "libauth",
+    "Michal",
     "mkdir",
     "prettierignore",
     "sandboxed",
@@ -25,7 +27,9 @@
     "typedoc",
     "tzip",
     "tzips",
-    "untracked"
+    "tzklar",
+    "untracked",
+    "Wrzosek"
   ],
   "flagWords": [],
   "ignorePaths": [
