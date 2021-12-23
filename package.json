@@ -5,7 +5,12 @@
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
   "module": "build/module/index.js",
-  "repository": "https://github.com/michal-wrzosek/tzklar",
+  "repository": "https://github.com/klarluft/tzklar",
+  "author": {
+    "email": "contact@klarluft.com",
+    "name": "Klarluft (Michal Wrzosek)",
+    "url": "https://klarluft.com"
+  },
   "license": "MIT",
   "keywords": [],
   "scripts": {
@@ -36,7 +41,8 @@
     "doc:publish": "gh-pages -m \"[ci skip] Updates\" -d build/docs",
     "version": "standard-version",
     "reset-hard": "git clean -dfx && git reset --hard && yarn",
-    "prepare-release": "run-s reset-hard test cov:check doc:html version doc:publish"
+    "prepare-release": "run-s reset-hard test cov:check doc:html version doc:publish",
+    "process-json-schema": "ts-node src/lib/json-schema/process-json-schema.ts"
   },
   "engines": {
     "node": ">=10"
@@ -47,6 +53,7 @@
   "devDependencies": {
     "@ava/typescript": "^1.1.1",
     "@istanbuljs/nyc-config-typescript": "^1.0.1",
+    "@types/node": "^17.0.4",
     "@typescript-eslint/eslint-plugin": "^4.0.1",
     "@typescript-eslint/parser": "^4.0.1",
     "ava": "^3.12.1",
@@ -58,6 +65,7 @@
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.22.0",
     "gh-pages": "^3.1.0",
+    "json-schema-to-typescript": "^10.1.5",
     "npm-run-all": "^4.1.5",
     "nyc": "^15.1.0",
     "open-cli": "^6.0.1",
@@ -94,7 +102,11 @@
     }
   },
   "prettier": {
-    "singleQuote": true
+    "printWidth": 120,
+    "trailingComma": "es5",
+    "semi": true,
+    "tabWidth": 2,
+    "useTabs": false
   },
   "nyc": {
     "extends": "@istanbuljs/nyc-config-typescript",

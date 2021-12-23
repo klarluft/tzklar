@@ -3,8 +3,8 @@
   "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/master/cspell.schema.json",
   "language": "en",
   "words": [
-    "bitjson",
     "bitauth",
+    "bitjson",
     "cimg",
     "circleci",
     "codecov",
@@ -15,12 +15,16 @@
     "execa",
     "exponentiate",
     "globby",
+    "Klar",
     "libauth",
     "mkdir",
     "prettierignore",
     "sandboxed",
+    "Tezos",
     "transpiled",
     "typedoc",
+    "tzip",
+    "tzips",
     "untracked"
   ],
   "flagWords": [],
@@ -29,6 +33,8 @@
     "package-lock.json",
     "yarn.lock",
     "tsconfig.json",
-    "node_modules/**"
+    "node_modules/**",
+    "/src/lib/tzip16/tzip16.d.ts",
+    "/src/lib/tzip21/tzip21.d.ts"
   ]
 }
