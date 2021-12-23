@@ -1,0 +1,155 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>tzklar</title>
+	<meta name="description" content="Documentation for tzklar">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">tzklar</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1>tzklar</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#tzklar" id="tzklar" style="color: inherit; text-decoration: none;">
+					<h1>tzKlar</h1>
+				</a>
+				<p><strong>Building blocks for Tezos contracts</strong></p>
+				<p><a href="https://tzklar.com">https://tzklar.com</a></p>
+				<a href="#how-to-install" id="how-to-install" style="color: inherit; text-decoration: none;">
+					<h2>How to install</h2>
+				</a>
+				<p>Install via npm or yarn</p>
+				<pre><code class="language-bash">npm install tzklar
+yarn add tzklar
+</code></pre>
+				<a href="#how-to-use" id="how-to-use" style="color: inherit; text-decoration: none;">
+					<h2>How to use</h2>
+				</a>
+				<p>If you need TypeScript types for defining TZIP12, TZIP16 and TZIP21 compliant JSON metadata files:</p>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { ContractMetadata, TokenMetadata } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;tzklar&quot;</span>;
+
+<span class="hljs-keyword">const</span> myContractMetadata: ContractMetadata = {
+  <span class="hljs-comment">/* ... */</span>
+};
+
+<span class="hljs-keyword">const</span> myTokenMetadata: TokenMetadata = {
+  <span class="hljs-comment">/* ... */</span>
+};
+</code></pre>
+				<a href="#development" id="development" style="color: inherit; text-decoration: none;">
+					<h2>Development</h2>
+				</a>
+				<p>To setup development environment:</p>
+				<pre><code class="language-bash">yarn
+</code></pre>
+				<p>If you update TZIP schema.json files and you want to regenerate TypeScript types files, run:</p>
+				<pre><code class="language-bash">yarn process-json-schema
+</code></pre>
+				<a href="#about" id="about" style="color: inherit; text-decoration: none;">
+					<h2>About</h2>
+				</a>
+				<p>This repository is part of the <a href="https://tzklar.com">tzKlar</a> project intended to help others build apps on Tezos.</p>
+				<p>The project is maintained by <a href="https://michal.wrzosek.pl">Michal Wrzosek</a> from <a href="https://klarluft.com">Klarluft</a> company.</p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/contractmetadata.html" class="tsd-kind-icon">Contract<wbr>Metadata</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/filetoprocess.html" class="tsd-kind-icon">File<wbr>ToProcess</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/tokenmetadata.html" class="tsd-kind-icon">Token<wbr>Metadata</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#filestoprocess" class="tsd-kind-icon">files<wbr>ToProcess</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#processjsonschema" class="tsd-kind-icon">processJSONSchema</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
