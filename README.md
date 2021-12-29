@@ -8,6 +8,12 @@
 
 [https://tzklar.com](https://tzklar.com)
 
+---
+
+Check out [tzklar-boilerplate](https://github.com/klarluft/tzklar-boilerplate) repository where you can find fully functional FA2 contract implementation using utilities from this package.
+
+---
+
 ## How to install
 
 Install via npm or yarn
@@ -52,6 +58,7 @@ yarn process-json-schema
 
 ## About
 
-This repository is part of the [tzKlar](https://tzklar.com) project intended to help others build apps on Tezos.
+[![klarluft](./klarluft-logo-black.png)](https://klarluft.com)
+[![michal-wrzosek](./michal-wrzosek-avatar.jpg)](https://github.com/michal-wrzosek)
 
-The project is maintained by [Michal Wrzosek](https://michal.wrzosek.pl) from [Klarluft](https://klarluft.com) company.
+[tzKlar](https://tzklar.com) project is created and maintained by [Michal Wrzosek](https://github.com/michal-wrzosek) from [Klarluft](https://klarluft.com).
