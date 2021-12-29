@@ -1,1 +1,1 @@
-export * from "./token-metadata.types";
+export * from "./token-metadata";

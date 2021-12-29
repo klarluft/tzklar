@@ -15,6 +15,8 @@ export interface TokenMetadataTZIP12 {
   /**
    * should be an integer (converted to a UTF-8 string in decimal) which defines the position of the decimal
    * point in token balances for display purposes.
+   *
+   * Extra: Official proposal says it should be a `string`, but it seems that it actually should be a `number`
    */
-  decimals: string;
+  decimals: number;
 }

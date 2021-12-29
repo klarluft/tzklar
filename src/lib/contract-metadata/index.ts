@@ -1,1 +1,1 @@
-export * from "./contract-metadata.types";
+export * from "./contract-metadata";
