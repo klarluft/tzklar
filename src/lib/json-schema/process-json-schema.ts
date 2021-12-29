@@ -12,14 +12,41 @@ interface FileToProcess {
   outputPath: string;
 }
 
+/**
+ * Using a `String` title in the schema is breaking `json-schema-to-typescript`. It confuses it with a `string`.
+ * That's why I'm changing the title here to `StringExpression`.
+ */
+const tzip16ExpressionsWithFixedStringExpression = tzip16SchemaJSON.definitions[
+  "micheline.tzip-16.expression"
+].oneOf.map((expression) => {
+  if (expression.title === "String")
+    return {
+      ...expression,
+      title: "StringExpression",
+    };
+
+  return expression;
+});
+
+const fixedTZIP16SchemaJSON = {
+  ...tzip16SchemaJSON,
+  definitions: {
+    ...tzip16SchemaJSON.definitions,
+    "micheline.tzip-16.expression": {
+      ...tzip16SchemaJSON.definitions["micheline.tzip-16.expression"],
+      oneOf: tzip16ExpressionsWithFixedStringExpression,
+    },
+  },
+};
+
 const filesToProcess: FileToProcess[] = [
   /**
    * @link https://gitlab.com/tezos/tzip/-/blob/master/proposals/tzip-16/metadata-schema.json
    */
   {
-    inputJSON: tzip16SchemaJSON,
+    inputJSON: fixedTZIP16SchemaJSON,
     schemaTitle: "ContractMetadataTZIP16",
-    outputPath: "../tzip16/tzip16.d.ts",
+    outputPath: "../tzip16/tzip16.ts",
   },
   /**
    * @link https://gitlab.com/tezos/tzip/-/blob/master/proposals/tzip-21/metadata-schema.json
@@ -27,7 +54,7 @@ const filesToProcess: FileToProcess[] = [
   {
     inputJSON: tzip21SchemaJSON,
     schemaTitle: "TokenMetadataTZIP21",
-    outputPath: "../tzip21/tzip21.d.ts",
+    outputPath: "../tzip21/tzip21.ts",
   },
 ];
 

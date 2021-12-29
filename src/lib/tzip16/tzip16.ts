@@ -13,7 +13,12 @@ export type ContractProducingTools = string[];
  * Location (URL) of the source code.
  */
 export type SourceLocation = string;
-export type MichelineTzip16Expression = Int | string | Bytes | Sequence | GenericPrimAnyNumberOfArgsWithOrWithoutAnnot;
+export type MichelineTzip16Expression =
+  | Int
+  | StringExpression
+  | Bytes
+  | Sequence
+  | GenericPrimAnyNumberOfArgsWithOrWithoutAnnot;
 /**
  * Decimal representation of a big number
  */
@@ -105,7 +110,7 @@ export interface StaticErrorTranslator {
 export interface Int {
   int: BigNumber;
 }
-export interface String {
+export interface StringExpression {
   string: UniversalStringRepresentation;
 }
 export interface Bytes {
@@ -131,15 +136,15 @@ export interface MichelsonStorageView {
     /**
      * The Michelson type of the potential external parameters required by the code of the view.
      */
-    parameter?: Int | string | Bytes | Sequence | GenericPrimAnyNumberOfArgsWithOrWithoutAnnot;
+    parameter?: Int | StringExpression | Bytes | Sequence | GenericPrimAnyNumberOfArgsWithOrWithoutAnnot;
     /**
      * The type of the result of the view, i.e. the value left on the stack by the code.
      */
-    returnType: Int | string | Bytes | Sequence | GenericPrimAnyNumberOfArgsWithOrWithoutAnnot;
+    returnType: Int | StringExpression | Bytes | Sequence | GenericPrimAnyNumberOfArgsWithOrWithoutAnnot;
     /**
      * The Michelson code expression implementing the view.
      */
-    code: Int | string | Bytes | Sequence | GenericPrimAnyNumberOfArgsWithOrWithoutAnnot;
+    code: Int | StringExpression | Bytes | Sequence | GenericPrimAnyNumberOfArgsWithOrWithoutAnnot;
     /**
      * List of objects documenting the annotations used in the 3 above fields.
      */
