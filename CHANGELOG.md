@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/klarluft/tzklar/compare/v1.1.3...v2.0.0) (2021-12-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* **tzip and ipfs:** TZIP12 and TZIP16 types changed
+
+### Features
+
+* **tzip and ipfs:** new TZIP types and IPFS utilities ([70e5e1a](https://github.com/klarluft/tzklar/commit/70e5e1a3374b2e08c72415036f47babcb1eeca90))
+
 ### [1.1.3](https://github.com/klarluft/tzklar/compare/v1.1.2...v1.1.3) (2021-12-23)
 
 ### [1.1.2](https://github.com/klarluft/tzklar/compare/v1.1.1...v1.1.2) (2021-12-23)
