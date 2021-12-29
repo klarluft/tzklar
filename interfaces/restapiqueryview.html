@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>FileToProcess | tzklar</title>
+	<title>RestApiQueryView | tzklar</title>
 	<meta name="description" content="Documentation for tzklar">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,21 +56,28 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="filetoprocess.html">FileToProcess</a>
+					<a href="restapiqueryview.html">RestApiQueryView</a>
 				</li>
 			</ul>
-			<h1>Interface FileToProcess</h1>
+			<h1>Interface RestApiQueryView</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>An off-chain view using a REST API described in a separate OpenAPI specification. The following parameters form a pointer to the localtion in the OpenAPI description.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">FileToProcess</span>
+						<span class="target">RestApiQueryView</span>
 					</li>
 				</ul>
 			</section>
@@ -81,9 +88,7 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="filetoprocess.html#inputjson" class="tsd-kind-icon">inputJSON</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="filetoprocess.html#outputpath" class="tsd-kind-icon">output<wbr>Path</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="filetoprocess.html#schematitle" class="tsd-kind-icon">schema<wbr>Title</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="restapiqueryview.html#restapiquery" class="tsd-kind-icon">rest<wbr>Api<wbr>Query</a></li>
 							</ul>
 						</section>
 					</div>
@@ -92,34 +97,51 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="inputjson" class="tsd-anchor"></a>
-					<h3>inputJSON</h3>
-					<div class="tsd-signature tsd-kind-icon">inputJSON<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="restapiquery" class="tsd-anchor"></a>
+					<h3>rest<wbr>Api<wbr>Query</h3>
+					<div class="tsd-signature tsd-kind-icon">rest<wbr>Api<wbr>Query<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>baseUri<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>method<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">"GET"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"POST"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PUT"</span><span class="tsd-signature-symbol">; </span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>specificationUri<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/klarluft/tzklar/blob/9493770/src/lib/json-schema/process-json-schema.ts#L10">lib/json-schema/process-json-schema.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/klarluft/tzklar/blob/9493770/src/lib/tzip16/tzip16.ts#L165">lib/tzip16/tzip16.ts:165</a></li>
 						</ul>
 					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="outputpath" class="tsd-anchor"></a>
-					<h3>output<wbr>Path</h3>
-					<div class="tsd-signature tsd-kind-icon">output<wbr>Path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/klarluft/tzklar/blob/9493770/src/lib/json-schema/process-json-schema.ts#L12">lib/json-schema/process-json-schema.ts:12</a></li>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> base<wbr>Uri<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>The URI-prefix to use to query the API.</p>
+									</div>
+								</div>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> method<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">"GET"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"POST"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PUT"</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>The HTTP method to use.</p>
+									</div>
+								</div>
+							</li>
+							<li class="tsd-parameter">
+								<h5>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>The path component of the URI to look-up in the OpenAPI specification.</p>
+									</div>
+								</div>
+							</li>
+							<li class="tsd-parameter">
+								<h5>specification<wbr>Uri<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>A URI pointing at the location of the OpenAPI specification.</p>
+									</div>
+								</div>
+							</li>
 						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="schematitle" class="tsd-anchor"></a>
-					<h3>schema<wbr>Title</h3>
-					<div class="tsd-signature tsd-kind-icon">schema<wbr>Title<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/klarluft/tzklar/blob/9493770/src/lib/json-schema/process-json-schema.ts#L11">lib/json-schema/process-json-schema.ts:11</a></li>
-						</ul>
-					</aside>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -136,16 +158,10 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface">
-						<a href="filetoprocess.html" class="tsd-kind-icon">File<wbr>ToProcess</a>
+						<a href="restapiqueryview.html" class="tsd-kind-icon">Rest<wbr>Api<wbr>Query<wbr>View</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="filetoprocess.html#inputjson" class="tsd-kind-icon">inputJSON</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="filetoprocess.html#outputpath" class="tsd-kind-icon">output<wbr>Path</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="filetoprocess.html#schematitle" class="tsd-kind-icon">schema<wbr>Title</a>
+								<a href="restapiqueryview.html#restapiquery" class="tsd-kind-icon">rest<wbr>Api<wbr>Query</a>
 							</li>
 						</ul>
 					</li>

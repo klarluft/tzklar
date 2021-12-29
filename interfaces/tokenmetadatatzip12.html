@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>FileToProcess | tzklar</title>
+	<title>TokenMetadataTZIP12 | tzklar</title>
 	<meta name="description" content="Documentation for tzklar">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,21 +56,35 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="filetoprocess.html">FileToProcess</a>
+					<a href="tokenmetadatatzip12.html">TokenMetadataTZIP12</a>
 				</li>
 			</ul>
-			<h1>Interface FileToProcess</h1>
+			<h1>Interface TokenMetadataTZIP12</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<dl class="tsd-comment-tags">
+						<dt>link</dt>
+						<dd><p><a href="https://gitlab.com/tezos/tzip/-/blob/master/proposals/tzip-12/tzip-12.md">https://gitlab.com/tezos/tzip/-/blob/master/proposals/tzip-12/tzip-12.md</a></p>
+						</dd>
+					</dl>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">FileToProcess</span>
+						<span class="target">TokenMetadataTZIP12</span>
+						<ul class="tsd-hierarchy">
+							<li>
+								<a href="tokenmetadata.html" class="tsd-signature-type">TokenMetadata</a>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -81,9 +95,9 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="filetoprocess.html#inputjson" class="tsd-kind-icon">inputJSON</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="filetoprocess.html#outputpath" class="tsd-kind-icon">output<wbr>Path</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="filetoprocess.html#schematitle" class="tsd-kind-icon">schema<wbr>Title</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="tokenmetadatatzip12.html#decimals" class="tsd-kind-icon">decimals</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="tokenmetadatatzip12.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="tokenmetadatatzip12.html#symbol" class="tsd-kind-icon">symbol</a></li>
 							</ul>
 						</section>
 					</div>
@@ -92,34 +106,51 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="inputjson" class="tsd-anchor"></a>
-					<h3>inputJSON</h3>
-					<div class="tsd-signature tsd-kind-icon">inputJSON<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="decimals" class="tsd-anchor"></a>
+					<h3>decimals</h3>
+					<div class="tsd-signature tsd-kind-icon">decimals<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/klarluft/tzklar/blob/9493770/src/lib/json-schema/process-json-schema.ts#L10">lib/json-schema/process-json-schema.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/klarluft/tzklar/blob/9493770/src/lib/tzip12/tzip12.ts#L21">lib/tzip12/tzip12.ts:21</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>should be an integer (converted to a UTF-8 string in decimal) which defines the position of the decimal
+							point in token balances for display purposes.</p>
+						</div>
+						<p>Extra: Official proposal says it should be a <code>string</code>, but it seems that it actually should be a <code>number</code></p>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="outputpath" class="tsd-anchor"></a>
-					<h3>output<wbr>Path</h3>
-					<div class="tsd-signature tsd-kind-icon">output<wbr>Path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="name" class="tsd-anchor"></a>
+					<h3>name</h3>
+					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/klarluft/tzklar/blob/9493770/src/lib/json-schema/process-json-schema.ts#L12">lib/json-schema/process-json-schema.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/klarluft/tzklar/blob/9493770/src/lib/tzip12/tzip12.ts#L8">lib/tzip12/tzip12.ts:8</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>should be a UTF-8 string giving a “display name” to the token.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="schematitle" class="tsd-anchor"></a>
-					<h3>schema<wbr>Title</h3>
-					<div class="tsd-signature tsd-kind-icon">schema<wbr>Title<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="symbol" class="tsd-anchor"></a>
+					<h3>symbol</h3>
+					<div class="tsd-signature tsd-kind-icon">symbol<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/klarluft/tzklar/blob/9493770/src/lib/json-schema/process-json-schema.ts#L11">lib/json-schema/process-json-schema.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/klarluft/tzklar/blob/9493770/src/lib/tzip12/tzip12.ts#L13">lib/tzip12/tzip12.ts:13</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>should be a UTF-8 string for the short identifier of the token (e.g. XTZ, EUR, ...).</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -136,16 +167,16 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface">
-						<a href="filetoprocess.html" class="tsd-kind-icon">File<wbr>ToProcess</a>
+						<a href="tokenmetadatatzip12.html" class="tsd-kind-icon">Token<wbr>MetadataTZIP12</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="filetoprocess.html#inputjson" class="tsd-kind-icon">inputJSON</a>
+								<a href="tokenmetadatatzip12.html#decimals" class="tsd-kind-icon">decimals</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="filetoprocess.html#outputpath" class="tsd-kind-icon">output<wbr>Path</a>
+								<a href="tokenmetadatatzip12.html#name" class="tsd-kind-icon">name</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="filetoprocess.html#schematitle" class="tsd-kind-icon">schema<wbr>Title</a>
+								<a href="tokenmetadatatzip12.html#symbol" class="tsd-kind-icon">symbol</a>
 							</li>
 						</ul>
 					</li>

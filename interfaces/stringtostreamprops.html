@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>FileToProcess | tzklar</title>
+	<title>StringToStreamProps | tzklar</title>
 	<meta name="description" content="Documentation for tzklar">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="filetoprocess.html">FileToProcess</a>
+					<a href="stringtostreamprops.html">StringToStreamProps</a>
 				</li>
 			</ul>
-			<h1>Interface FileToProcess</h1>
+			<h1>Interface StringToStreamProps</h1>
 		</div>
 	</div>
 </header>
@@ -70,7 +70,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">FileToProcess</span>
+						<span class="target">StringToStreamProps</span>
 					</li>
 				</ul>
 			</section>
@@ -81,9 +81,8 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="filetoprocess.html#inputjson" class="tsd-kind-icon">inputJSON</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="filetoprocess.html#outputpath" class="tsd-kind-icon">output<wbr>Path</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="filetoprocess.html#schematitle" class="tsd-kind-icon">schema<wbr>Title</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="stringtostreamprops.html#filename" class="tsd-kind-icon">filename</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="stringtostreamprops.html#objecttoconvert" class="tsd-kind-icon">object<wbr>ToConvert</a></li>
 							</ul>
 						</section>
 					</div>
@@ -92,34 +91,34 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="inputjson" class="tsd-anchor"></a>
-					<h3>inputJSON</h3>
-					<div class="tsd-signature tsd-kind-icon">inputJSON<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="filename" class="tsd-anchor"></a>
+					<h3>filename</h3>
+					<div class="tsd-signature tsd-kind-icon">filename<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/klarluft/tzklar/blob/9493770/src/lib/json-schema/process-json-schema.ts#L10">lib/json-schema/process-json-schema.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/klarluft/tzklar/blob/9493770/src/lib/utils/string-to-stream.ts#L12">lib/utils/string-to-stream.ts:12</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Filename, like &quot;metadata.json&quot;</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="outputpath" class="tsd-anchor"></a>
-					<h3>output<wbr>Path</h3>
-					<div class="tsd-signature tsd-kind-icon">output<wbr>Path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="objecttoconvert" class="tsd-anchor"></a>
+					<h3>object<wbr>ToConvert</h3>
+					<div class="tsd-signature tsd-kind-icon">object<wbr>ToConvert<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/klarluft/tzklar/blob/9493770/src/lib/json-schema/process-json-schema.ts#L12">lib/json-schema/process-json-schema.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/klarluft/tzklar/blob/9493770/src/lib/utils/string-to-stream.ts#L7">lib/utils/string-to-stream.ts:7</a></li>
 						</ul>
 					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="schematitle" class="tsd-anchor"></a>
-					<h3>schema<wbr>Title</h3>
-					<div class="tsd-signature tsd-kind-icon">schema<wbr>Title<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/klarluft/tzklar/blob/9493770/src/lib/json-schema/process-json-schema.ts#L11">lib/json-schema/process-json-schema.ts:11</a></li>
-						</ul>
-					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Object to convert into a stream</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -136,16 +135,13 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface">
-						<a href="filetoprocess.html" class="tsd-kind-icon">File<wbr>ToProcess</a>
+						<a href="stringtostreamprops.html" class="tsd-kind-icon">String<wbr>ToStream<wbr>Props</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="filetoprocess.html#inputjson" class="tsd-kind-icon">inputJSON</a>
+								<a href="stringtostreamprops.html#filename" class="tsd-kind-icon">filename</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="filetoprocess.html#outputpath" class="tsd-kind-icon">output<wbr>Path</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="filetoprocess.html#schematitle" class="tsd-kind-icon">schema<wbr>Title</a>
+								<a href="stringtostreamprops.html#objecttoconvert" class="tsd-kind-icon">object<wbr>ToConvert</a>
 							</li>
 						</ul>
 					</li>
